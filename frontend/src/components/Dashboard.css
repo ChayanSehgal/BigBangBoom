@@ -1,0 +1,162 @@
+body {
+    background-color: #1e1e2f; /* Dark background */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    color: #f5f5f5; /* Light text color for contrast */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-logo {
+    width: 100%; /* Adjust as needed */
+    max-width: 400px; /* Set a maximum width for responsiveness */
+    margin-bottom: 20px; /* Space below the logo */
+  }
+  
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    height: 100vh;
+    background: linear-gradient(1000deg, #000000, #191919); /* Gradient background */
+    overflow: auto; /* In case of overflow */
+}
+
+.dashboard-title {
+    font-size: 3em; /* Slightly larger title size */
+    color: #ffffff; /* White color for title */
+    margin-bottom: 40px; /* Increase space below the title */
+    text-align: center; /* Center align text */
+    text-transform: uppercase; /* Uppercase title */
+    letter-spacing: 3px; /* Increase spacing between letters */
+    font-weight: bold; /* Make the title bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for color and shadow */
+    position: relative; /* For pseudo-element */
+}
+
+.dashboard-title::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 6px;
+    background-color: #4db8ff; /* Blue underline */
+    bottom: -10px; /* Position below the text */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%);
+    border-radius: 3px; /* Rounded edges */
+    transition: width 0.3s; /* Smooth transition for width */
+}
+
+.dashboard-title:hover::before {
+    width: 100px; /* Expand underline on hover */
+}
+
+.dashboard-title:hover {
+    color: #4db8ff; /* Change color on hover */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Intensify text shadow on hover */
+}
+
+
+.dashboard-title:hover {
+    color: #4db8ff; /* Change color on hover */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Intensify text shadow on hover */
+}
+
+
+.user-info-container {
+    /* background-color: #2a2a3c;  */
+    /* Darker background for user info */
+    padding: 45px; /* Padding for the info box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    width: 400px; /* Fixed width for consistency */
+    text-align: center; /* Center align text */
+    transition: transform 0.3s; /* Smooth transition effect */
+    margin: 15px; /* Margin for spacing */
+}
+
+.user-info-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    background: linear-gradient(135deg, #2a2a3c, #1e1e2f); /* Subtle gradient on hover */
+}
+
+.user-info-title {
+    font-size: 2em; /* Title size for user info */
+    color: #000000; /* Bright blue for the title */
+    margin-bottom: 20px; /* Space below the title */
+    text-transform: uppercase; /* Uppercase for subheadings */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.user-info {
+    font-size: 1.2em; /* Font size for user info */
+    color: #d1d1d1; /* Light gray for paragraph text */
+    margin: 10px 0; /* Space above and below user info */
+    line-height: 1.5; /* Line height for readability */
+    display: flex;
+    align-items: center;
+    background: #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon {
+    margin-right: 10px;
+    color: #4db8ff;
+}
+
+.info-text {
+    margin-left: 10px;
+    color: #ffffff; /* Bright color for contrast */
+    font-weight: 600; /* Bold font weight */
+}
+
+.user-image {
+    margin-top: 20px;
+    width: 100%; /* Responsive image */
+    max-width: 120px; /* Maximum size */
+    border-radius: 10%; /* Circular profile picture */
+    border: 3px solid #4db8ff; /* Blue border around the image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow around the image */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 2.2em; /* Adjust title size */
+    }
+
+    .user-info-container {
+        width: 90%; /* Responsive width */
+    }
+
+    .user-info-title {
+        font-size: 1.7em; /* Adjust title size */
+    }
+
+    .user-info {
+        font-size: 1em; /* Adjust font size for info */
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-title {
+        font-size: 1.8em; /* Further reduce font size */
+    }
+
+    .user-info-container {
+        padding: 30px; /* Less padding for smaller screens */
+    }
+
+    .user-info-title {
+        font-size: 1.4em; /* Smaller title size */
+    }
+
+    .user-info {
+        font-size: 0.9em; /* Smaller font size for info */
+    }
+}
